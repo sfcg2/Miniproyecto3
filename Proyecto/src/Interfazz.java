@@ -51,7 +51,7 @@ public class Interfazz extends JFrame implements ActionListener, ItemListener {
     ListaCandidatos lc = new ListaCandidatos();
     PMasC pc = new PMasC();
     Ciudadestop3 tp = new Ciudadestop3();
-///
+
     public Interfazz (){
 
         contenedor = getContentPane();
@@ -95,7 +95,7 @@ public class Interfazz extends JFrame implements ActionListener, ItemListener {
         setSize(500, 580); 
         setVisible(true); 
     }
-
+ 
     
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -304,6 +304,7 @@ public class Interfazz extends JFrame implements ActionListener, ItemListener {
             wnd.setVisible(true);
         }
     }
+    
 
     @Override
     public void itemStateChanged(ItemEvent e) {
@@ -317,6 +318,7 @@ public class Interfazz extends JFrame implements ActionListener, ItemListener {
             }
         }
     }
+    
 
     public static String getNom() {
         return nom.getText();

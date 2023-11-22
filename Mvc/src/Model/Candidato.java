@@ -2,12 +2,13 @@ package Model;
 
 public class Candidato extends Ciudadano {
     
+    private String ideologia, partido_P, promesas;
+    private int votos;
+
     public static Candidato candidato = new Candidato();
     
     public Candidato(){};
 
-    private String ideologia, partido_P, promesas;
-    private int votos;
     
     public String getIdeologia() {
         return ideologia.toUpperCase();

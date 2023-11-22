@@ -1,7 +1,10 @@
-package View;
-
+package View; 
 import java.util.ArrayList;
+import java.awt.BorderLayout;
 import java.awt.Container;
+import java.awt.GridLayout;
+import java.awt.Font;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -12,8 +15,9 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+
+import Controller.ControladorCandidato;
 import Model.Candidato;
-import javafx.scene.text.Font;
 
 
 public class VistaGui extends JFrame implements VistaGeneral{
@@ -80,47 +84,46 @@ public class VistaGui extends JFrame implements VistaGeneral{
         contenedor.add(panel, BorderLayout.SOUTH);
 
         iniciar = new JButton("Iniciar");
-        iniciar.addActionListener(this);
         contenedor.add(iniciar, BorderLayout.CENTER);
 
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         setSize(500, 580); 
-        setVisible(true); 
+        
     }
 
     @Override
     public String getNombre() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getNombre'");
+        return nom.getText();
     }
 
     @Override
     public String getCedula() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getCedula'");
+        return cc.getText();
     }
 
     @Override
     public String getCiudad() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getCiudad'");
+        return cdad.getText();
     }
 
     @Override
     public String getPartido_P() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getPartido_P'");
+        return part.getText();
     }
 
     @Override
     public String getIdeologia() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getIdeologia'");
+        return idel.getText();
     }
 
     @Override
     public String getPromesas() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getPromesas'");
+        return prom.getText();
+    }
+
+    @Override
+    public void iniciar1(ControladorCandidato candidatos) {
+        iniciar.addActionListener(candidatos);
+        setVisible(true); 
     }
 }

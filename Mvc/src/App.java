@@ -1,4 +1,4 @@
-import Controller.ControladorInsertar;
+import Controller.ControladorCandidato;
 import View.VistaGui;
 import Model.Candidato;
 import Model.Ciudadano;
@@ -12,8 +12,8 @@ public class App {
         //Candidato candidato = new Candidato();
         //Ciudadano ciudadano = new Ciudadano();
 
-        ControladorInsertar insertar = new ControladorInsertar(Candidato.candidato, Ciudadano.ciudadano, vista2);
-
+        //ControladorInsertar insertar = new ControladorInsertar(Candidato.candidato, Ciudadano.ciudadano, vista2);
+        ControladorCandidato candidatos = new ControladorCandidato(Candidato.candidato, Ciudadano.ciudadano, vista2);
         
         //controlador.iniciarApp();
     }

@@ -2,9 +2,11 @@ package Model;
 
 public class Candidato extends Ciudadano {
     
-    private String ideologia; 
-    private String partido_P;
-    private String promesas;
+    public static Candidato candidato = new Candidato();
+    
+    public Candidato(){};
+
+    private String ideologia, partido_P, promesas;
     private int votos;
     
     public String getIdeologia() {

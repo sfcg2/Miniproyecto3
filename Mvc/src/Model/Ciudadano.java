@@ -2,9 +2,11 @@ package Model;
 
 public class Ciudadano {
 
-    private String nombre;
-    private String cedula;
-    private String ciudad;
+    public static Ciudadano ciudadano = new Ciudadano();
+
+    public Ciudadano(){};
+
+    private String nombre, cedula, ciudad;
 
     public String getNombre (){
         return nombre;

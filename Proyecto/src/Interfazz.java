@@ -51,7 +51,7 @@ public class Interfazz extends JFrame implements ActionListener, ItemListener {
     ListaCandidatos lc = new ListaCandidatos();
     PMasC pc = new PMasC();
     Ciudadestop3 tp = new Ciudadestop3();
-
+///
     public Interfazz (){
 
         contenedor = getContentPane();

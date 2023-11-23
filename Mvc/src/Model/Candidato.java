@@ -70,4 +70,7 @@ public class Candidato extends Ciudadano {
         + "\nIdeología: " + getIdeologia() + "\nPartido Politico: " + getPartido_P() +"\nPromesas: " 
         + getPromesas() + "\nVotos: " + getVotos();
     }
+
+    public void agregarCandidato(Candidato candidato) {
+    }
 }

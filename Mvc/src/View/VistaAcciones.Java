@@ -3,7 +3,7 @@ public class VistaAcciones extends JFrame implements ActionListener, ItemListene
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if(e.getSource() == iniciar){
+       /*  if(e.getSource() == iniciar){
 
             dispose();
             wnd = new JFrame("Elecciones");
@@ -58,19 +58,19 @@ public class VistaAcciones extends JFrame implements ActionListener, ItemListene
  
             wnd.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
             wnd.setSize(500, 570); 
-            wnd.setVisible(true);
+            wnd.setVisible(true);*/
 
         }else if(e.getSource() == insertar){
 
             inscripciones();
                 
-        }else if(e.getSource() == ingresar){
+        }else if(e.getSource() == ingresar){ //NO SE DONDE METER ESAS TRES 
 
             in.insertar();
             
         }else if(e.getSource() == salir1){
             wnd.dispose();
-        }else if(e.getSource() == actualizar){
+        }/*else if(e.getSource() == actualizar){
 
             buscarCedula = JOptionPane.showInputDialog(wnd, "Ingrese la cédula del candidato a actualizar:");
             Actualizar.setVal4(false);
@@ -82,9 +82,9 @@ public class VistaAcciones extends JFrame implements ActionListener, ItemListene
                     inscripciones();
                 }
                 
-            }else{return;}
+            }else{return;}*/
 
-        }else if(e.getSource() == eliminar){
+        /* }else if(e.getSource() == eliminar){
 
             buscarCedula = JOptionPane.showInputDialog(wnd, "Ingrese la cédula del candidato a eliminar:");
 
@@ -92,9 +92,9 @@ public class VistaAcciones extends JFrame implements ActionListener, ItemListene
                 
                 el.eliminar();
                 
-            }else{return;}
+            }else{return;}*/
 
-        }else if(e.getSource() == buscar){
+       /*  }else if(e.getSource() == buscar){
 
             buscarCedula = JOptionPane.showInputDialog(wnd,"Ingrese la cédula del candidato a buscar:");
             
@@ -119,9 +119,9 @@ public class VistaAcciones extends JFrame implements ActionListener, ItemListene
                     System.out.println(lsiat.toString()); 
                 }
                
-            }else{return;}
+            }else{return;}*/
             
-        }else if(e.getSource() == listar){
+        }/*else if(e.getSource() == listar){
 
             wnd2 = new JFrame("Lista Candidatos");
             wnd2.setLayout(new BorderLayout());
@@ -146,9 +146,9 @@ public class VistaAcciones extends JFrame implements ActionListener, ItemListene
             wnd2.setSize(500, 570); 
             wnd2.setVisible(true);
 
-        }else if(e.getSource() == salir2){wnd2.dispose();}
+        }else if(e.getSource() == salir2){wnd2.dispose();}*/
         
-        else if (e.getSource() == votar){
+       /*  else if (e.getSource() == votar){
 
             wnd = new JFrame("Votación");
             wnd.setLayout(new BorderLayout());
@@ -188,7 +188,7 @@ public class VistaAcciones extends JFrame implements ActionListener, ItemListene
             vt.votar();
             wnd.dispose();
 
-        }else if(e.getSource() == info){
+        }/*else if(e.getSource() == info){
 
             wnd = new JFrame("Información");
             wnd.setLayout(new BorderLayout());
@@ -205,6 +205,6 @@ public class VistaAcciones extends JFrame implements ActionListener, ItemListene
             wnd.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
             wnd.setSize(500, 570); 
             wnd.setVisible(true);
-        }
+        }*/
     }
 }

@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 public class VistaPanel extends JFrame implements ActionListener, ItemListener {
     
-    public Interfazz (){
+    public void Interfazz (){
 
         contenedor = getContentPane();
         contenedor.setLayout(new BorderLayout(50,150));
@@ -72,3 +72,5 @@ public class VistaPanel extends JFrame implements ActionListener, ItemListener {
 
 
 }
+
+//Aqui esta solo el panel principal, bien

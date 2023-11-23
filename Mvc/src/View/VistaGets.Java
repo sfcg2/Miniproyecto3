@@ -25,3 +25,6 @@ public class VistaGets extends JFrame implements ActionListener, ItemListener {
     }
 
 }
+
+//Aqui solo estan los get(funciones), bien 
+//Falta ver para que son esos get lol

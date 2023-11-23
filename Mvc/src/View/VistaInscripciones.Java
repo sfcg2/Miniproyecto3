@@ -79,3 +79,5 @@ public class VistaInscripciones extends JFrame implements ActionListener, ItemLi
     }
 
 }
+
+//Esta bien, solo esta inscripciones

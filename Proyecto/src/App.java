@@ -12,7 +12,7 @@ public class App {
             e.printStackTrace();
         }
         
-        Interfazz zz = new Interfazz();
+        //Interfazz zz = new Interfazz();
     }
 
 }

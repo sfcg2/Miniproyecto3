@@ -59,8 +59,7 @@ public class Candidato extends Ciudadano {
     }
 
     public void setsumarVotos() {
-        votos++;
-        
+        votos++; 
     }
 
     public int getVotos() {

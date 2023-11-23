@@ -1,10 +1,11 @@
 package View; 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.Font;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -30,15 +31,15 @@ public class VistaGui extends JFrame implements VistaGeneral{
     JScrollPane scroll;
     JLabel etq, etq2;
     JButton iniciar, ingresar, salir1, salir2, vtar ;
-    ArrayList <Candidato> lsiat = Insertar.getInscritos();
+    //ArrayList <Candidato> lsiat = Insertar.getInscritos();
 
     public static JFrame wnd, wnd2;
     public static JTextField nom, cc, cdad, idel, part, prom, posic;
     public static JTextArea area; 
-    public static ArrayList <Candidato> lsiatElim = Eliminar.getListaC2();
+    //public static ArrayList <Candidato> lsiatElim = Eliminar.getListaC2();
     public static String buscarCedula;
 
-    Candidato candidato = new Candidato();
+    //Candidato candidato = new Candidato();
     //Insertar in = new Insertar();
     //Actualizar ac = new Actualizar();
     //Eliminar el = new Eliminar();
@@ -121,9 +122,44 @@ public class VistaGui extends JFrame implements VistaGeneral{
         return prom.getText();
     }
 
+    public JButton getIniciar(){
+        return iniciar;
+    }
+    /* 
+    public JFrame getWnd(){
+
+        if (wnd == null) {
+            wnd = new JFrame();
+        }return wnd;
+    }
+
+    public JMenu getIndica(){
+        if (indica == null) {
+            indica = new JMenu("Indicaciones");
+        }return indica;
+    }
+
+    public JMenu getOpciones(){
+        if (opciones == null) {
+            opciones = new JMenu("Opciones");
+        }return opciones;
+    }
+
+    public JMenuBar getBar(){
+        if (menuB == null) {
+            menuB = new JMenuBar();
+        }return menuB;
+    }*/
+
     @Override
     public void iniciar1(ControladorCandidato candidatos) {
+        System.out.println("hola");
+        contenedor.setVisible(true);
         iniciar.addActionListener(candidatos);
         setVisible(true); 
     }
+
+    
+
+    
 }

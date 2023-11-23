@@ -10,8 +10,11 @@ public interface VistaGeneral {
     public String getPartido_P();
     public String getIdeologia();
     public String getPromesas();
-    public int setsumarVotos();
+    //public JMenuBar getmenuB();
+    //public int setsumarVotos();
+    //public void iniciar1();
     public void iniciar1(ControladorCandidato controladorCandidato);
+    //public void iniciar2(ControladorCandidato controladorCandidato);
     
 
 }

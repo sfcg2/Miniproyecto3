@@ -13,6 +13,6 @@ public class Control {
         modelo.agregarCandidato(candidato);
     }
 
-    // Otros métodos del controlador según sea necesario...
+   
 }
 

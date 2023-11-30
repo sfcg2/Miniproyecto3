@@ -3,13 +3,17 @@ package Model;
 import java.util.ArrayList;
 
 public class modelo {
-    private ArrayList<Candidato> listaCandidatos = new ArrayList<>();
+    private CandidatoList candidatoList;
 
-    public void agregarCandidato(Candidato candidato) {
-        listaCandidatos.add(candidato);
+    public modelo() {
+        this.candidatoList = new CandidatoList();
     }
 
     public ArrayList<Candidato> getListaCandidatos() {
-        return listaCandidatos;
+        return candidatoList.getListaCandidatos();
+    }
+
+    public void setListaCandidatos(ArrayList<Candidato> lista) {
+        CandidatoList.setListaCandidatos(lista);
     }
 }

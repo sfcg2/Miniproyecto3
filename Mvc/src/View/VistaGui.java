@@ -7,8 +7,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.ArrayList;
-import Controler.Control;
+import Controler.ControlCandi;
 import Model.CandidatoList;
+import Model.Eliminar;
 
 public class VistaGui extends JFrame implements VistaGeneral {
     //  la interfaz 
@@ -45,7 +46,27 @@ public class VistaGui extends JFrame implements VistaGeneral {
 
     @Override
     public void mostrarVentanaEliminar() {
-        // el codigo pa eliminar
+        private Eliminar modelo;
+
+        public void Eliminar (Eliminar modelo) {
+            this.modelo = modelo;
+        }
+    
+        public void eliminar() {
+            String buscarCedula = JOptionPane.showInputDialog(null, "Ingrese la cédula del candidato a eliminar:");
+    
+            if (buscarCedula != null) {
+                modelo.eliminarCandidato(buscarCedula);
+            } else {
+                //  caso en el que se presiona cancelar en el cuadro
+            }
+        }
+    
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            // Implementar si es necesario
+        }
+    }
     }
 
     @Override

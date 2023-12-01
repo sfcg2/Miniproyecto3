@@ -10,7 +10,7 @@ public class modelo {
     }
 
     public ArrayList<Candidato> getListaCandidatos() {
-        return candidatoList.getListaCandidatos();
+        return CandidatoList.getListaCandidatos();
     }
 
     public void setListaCandidatos(ArrayList<Candidato> lista) {

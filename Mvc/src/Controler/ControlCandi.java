@@ -2,10 +2,10 @@ package Controler;
 
 import Model.Candidato;
 
-public class Control {
+public class ControlCandi {
     private Candidato modelo;
 
-    public Control(Candidato modelo) {
+    public ControlCandi(Candidato modelo) {
         this.modelo = modelo;
     }
 
@@ -14,5 +14,6 @@ public class Control {
     }
 
    
+    
 }
 

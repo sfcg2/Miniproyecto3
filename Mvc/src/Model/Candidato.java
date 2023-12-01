@@ -6,6 +6,16 @@ public class Candidato extends Ciudadano {
     private String partido_P;
     private String promesas;
     private int votos;
+
+
+     public Candidato() {
+        super();
+        this.ideologia = ideologia;
+        this.partido_P = partido_P;
+        this.promesas = promesas;
+        this.votos = 0; 
+    }
+
     
     public String getIdeologia() {
         return ideologia.toUpperCase();

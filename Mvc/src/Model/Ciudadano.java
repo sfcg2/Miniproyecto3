@@ -1,11 +1,10 @@
-public class Ciudadano  {
+package Model;
+
+public class Ciudadano {
 
     private String nombre;
     private String cedula;
     private String ciudad;
-
-
-    public Ciudadano(){};
 
     public String getNombre (){
         return nombre;
@@ -31,5 +30,4 @@ public class Ciudadano  {
         this.ciudad = cdad;
 
     }
-    
 }

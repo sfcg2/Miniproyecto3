@@ -1,32 +1,41 @@
 package Model;
 
-
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 public class Eliminar {
 
-    private static ArrayList<Candidato> listaC2 = Insertar.getInscritos();
+    private static ArrayList<Candidato> listaC2 = Insertar.getInscritos();   
 
-    public void eliminarCandidato(String cedula) {
+    public Eliminar(){}
+
+    
+
+    public void eliminar(){     
+        
         boolean val4 = false;
         Candidato candidato = new Candidato();
-        candidato.setCedula(cedula);
+        String cc = Interfazz.getBuscarCedula();
+        
+        candidato.setCedula(cc);
 
-        for (int i = 0; i < listaC2.size(); i++) {
-            if (candidato.getCedula().equalsIgnoreCase(listaC2.get(i).getCedula())) {
+        for(int i = 0; i<listaC2.size(); i++){ 
+            
+            if(candidato.getCedula().equalsIgnoreCase(listaC2.get(i).getCedula())){
                 val4 = true;
                 listaC2.remove(i);
-                //(actualizar la interfaz)
-                break;
+                JOptionPane.showMessageDialog(Interfazz.getwidth(), "  Candidato Eliminado", "INFO", JOptionPane.INFORMATION_MESSAGE);
             }
-        }
 
-        if (!val4) {
-            // codigo cuando no fue encontrado no fue encontrado (actualizar la interfaz)
-        }
-    }
+        }if(val4 == false){
 
-    public static ArrayList<Candidato> getListaC2() {
+            JOptionPane.showMessageDialog(Interfazz.getwidth(), "  Candidato NO encontrado","ERROR", JOptionPane.ERROR_MESSAGE);
+            return;
+        } 
+    
+    }public static ArrayList<Candidato> getListaC2() {
         return listaC2;
+
     }
+
 }

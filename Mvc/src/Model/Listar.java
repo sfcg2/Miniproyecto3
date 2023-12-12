@@ -1,6 +1,8 @@
+package Model;
+
 import java.util.ArrayList;
 
-public class ListaCandidatos {
+public class Listar {
 
     public void listaCandidatos(){     
         

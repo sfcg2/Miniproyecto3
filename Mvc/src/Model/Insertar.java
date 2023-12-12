@@ -1,14 +1,16 @@
 package Model;
 
-
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class Insertar {
 
-    private static ArrayList<Candidato> inscritos = new ArrayList<>();
+    public static ArrayList<Candidato> inscritos = new ArrayList<>(); 
+        
+    public Insertar(){};
 
-    public void insertar() {
+    public void insertar(){
+        
         Candidato candidato = new Candidato();
         String nom = Interfazz.getNom();
         String cc = Interfazz.getCC();
@@ -103,6 +105,5 @@ public class Insertar {
 
     }public static ArrayList<Candidato> getInscritos() {
         return inscritos;
-    }
     }
 }

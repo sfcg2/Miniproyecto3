@@ -1,33 +1,40 @@
 package Model;
 
 public class Ciudadano {
-
     private String nombre;
     private String cedula;
-    private String ciudad;
+    private String ciudadOrigen;
 
-    public String getNombre (){
+    
+    public Ciudadano(String nombre, String cedula, String ciudadOrigen) {
+        this.nombre = nombre;
+        this.cedula = cedula;
+        this.ciudadOrigen = ciudadOrigen;
+    }
+
+   
+    public String getNombre() {
         return nombre;
     }
-    
-    public void setNombre(String nom) {
-        this.nombre = nom; 
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getCedula() {
         return cedula;
     }
 
-    public void setCedula(String cc) {
-        this.cedula = cc;
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
 
-    public String getCiudad() {
-        return ciudad;
+    public String getCiudadOrigen() {
+        return ciudadOrigen;
     }
 
-    public void setCiudad(String cdad) {
-        this.ciudad = cdad;
-
+    public void setCiudadOrigen(String ciudadOrigen) {
+        this.ciudadOrigen = ciudadOrigen;
     }
 }
+

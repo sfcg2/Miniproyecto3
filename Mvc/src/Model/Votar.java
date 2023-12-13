@@ -2,6 +2,15 @@ package Model;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import View.VistaGui;
+import View.VistaGeneral;
+import View.VistaConsola;
+import Model.Candidato;
+import Model.Insertar;
+import Model.Listar;
+import Model.Eliminar;
+import Model.Votar;
+import Model.Ciudadano; 
 
 public class Votar {
 
@@ -13,7 +22,7 @@ public class Votar {
 
         while (!candidatoEncontrado) {
 
-            int posicionCandidato = Integer.parseInt(Interfazz.getPosic());
+            int posicionCandidato = Integer.parseInt(VistaGui.getPosic());
             
             if (posicionCandidato == 0){
                 return;
@@ -25,12 +34,12 @@ public class Votar {
                     candidatoEncontrado = true;
                     listaCandidatos.get(posicionCandidato - 1).setsumarVotos();
                     
-                    JOptionPane.showMessageDialog(Interfazz.getwidth(), "Voto Registrado para " + listaCandidatos.get(posicionCandidato - 1).getNombre() , "INFO", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(VistaGui.getwidth(), "Voto Registrado para " + listaCandidatos.get(posicionCandidato - 1).getNombre() , "INFO", JOptionPane.INFORMATION_MESSAGE);
                     return;
 
                 }else{
                     
-                    JOptionPane.showMessageDialog(Interfazz.getwidth(), "Posición NO Válida", "ERROR", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(VistaGui.getwidth(), "Posición NO Válida", "ERROR", JOptionPane.ERROR_MESSAGE);
                     return;                   
                 }
             }
@@ -53,12 +62,12 @@ public class Votar {
 
         }if (candidatoMasVotado != null) {
             
-            Interfazz.getArea().append("\n-> CANDIDATO GANADOR\n");
-            Interfazz.getArea().append("   " + candidatoMasVotado.getNombre() + " con " + maxVotos + " voto/s.\n");
-            Interfazz.getArea().append("   Promesas: " + candidatoMasVotado.getPromesas());
+            VistaGui.getArea().append("\n-> CANDIDATO GANADOR\n");
+            VistaGui.getArea().append("   " + candidatoMasVotado.getNombre() + " con " + maxVotos + " voto/s.\n");
+            VistaGui.getArea().append("   Promesas: " + candidatoMasVotado.getPromesas());
 
         }else{
-            Interfazz.getArea().append("-> NO hay Candidatos Registrados o \n   NO se han Registrado Votos.");
+            VistaGui.getArea().append("-> NO hay Candidatos Registrados o \n   NO se han Registrado Votos.");
         } 
     }
 }

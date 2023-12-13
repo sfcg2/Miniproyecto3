@@ -3,6 +3,8 @@ package Model;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
+import View.VistaGui;
+
 public class Buscar {
         
     public Buscar(){}
@@ -12,8 +14,8 @@ public class Buscar {
     public void buscar(){
         
         ArrayList<Candidato> listaC = Insertar.getInscritos();   
-        Candidato candidato = new Candidato();
-        String cc = Interfazz.getBuscarCedula();
+        Candidato candidato = new Candidato(null, null, null);
+        String cc = VistaGui.getBuscarCedula();
             
         candidato.setCedula(cc);
 
@@ -21,12 +23,12 @@ public class Buscar {
             
             if(candidato.getCedula().equalsIgnoreCase(listaC.get(i).getCedula())){
                 Buscar.setVal(true);
-                JOptionPane.showMessageDialog(Interfazz.getwidth(), "  Candidato Encontrado", "INFO", JOptionPane.INFORMATION_MESSAGE);
-                Interfazz.getArea().append(listaC.get(i).toString());
+                JOptionPane.showMessageDialog(VistaGui.getwidth(), "  Candidato Encontrado", "INFO", JOptionPane.INFORMATION_MESSAGE);
+                VistaGui.getArea().append(listaC.get(i).toString());
             }
 
         }if(Buscar.getVal() == false){
-            JOptionPane.showMessageDialog(Interfazz.getwidth(), "  Candidato NO encontrado","ERROR", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(VistaGui.getwidth(), "  Candidato NO encontrado","ERROR", JOptionPane.ERROR_MESSAGE);
             return;
         } 
     

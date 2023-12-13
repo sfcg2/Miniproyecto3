@@ -1,7 +1,18 @@
 package View;
 
+import javax.swing.*;
+import java.awt.*;
+
 public class VistaGeneral {
-    public void mostrarInformacionGeneral(String informacion) {
-        // Implementar la presentación general de la información
+    private JTextArea areaTexto;
+
+    public VistaGeneral() {
+        this.areaTexto = areaTexto;
     }
+
+    public void mostrarEnAreaTexto(String mensaje) {
+        areaTexto.append(mensaje + "\n");
+    }
+
+    // Otros métodos de presentación en la interfaz gráfica si es necesario
 }

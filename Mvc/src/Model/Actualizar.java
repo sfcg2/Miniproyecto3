@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
+import View.VistaGui;
+
 public class Actualizar extends Insertar{
 
     public Actualizar(){}
@@ -13,8 +15,8 @@ public class Actualizar extends Insertar{
     public void actualizar(){     
         
         ArrayList<Candidato> listaC = Insertar.getInscritos();
-        Candidato candidato = new Candidato();
-        String cc = Interfazz.getBuscarCedula();
+        Candidato candidato = new Candidato(null, null, null);
+        String cc = VistaGui.getBuscarCedula();
 
         candidato.setCedula(cc);
 
@@ -23,12 +25,12 @@ public class Actualizar extends Insertar{
             if(candidato.getCedula().equalsIgnoreCase(listaC.get(i).getCedula())){
                 Actualizar.setVal4(true);
                 listaC.remove(i);                   
-                JOptionPane.showMessageDialog(Interfazz.getwidth(), "Candidato Encontrado\n", "INFO", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(VistaGui.getwidth(), "Candidato Encontrado\n", "INFO", JOptionPane.INFORMATION_MESSAGE);
             }
 
         }if(val4 == false){
         
-            JOptionPane.showMessageDialog(Interfazz.getwidth(), "Candidato NO encontrado\n","ERROR", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(VistaGui.getwidth(), "Candidato NO encontrado\n","ERROR", JOptionPane.ERROR_MESSAGE);
             return;
         } 
         

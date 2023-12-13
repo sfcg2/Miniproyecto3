@@ -3,9 +3,10 @@ package View;
 import java.util.List;
 
 public class VistaConsola {
-    public void mostrarListaCandidatos(List<Candidato> candidatos) {
-        // Implementar la presentación de la lista de candidatos en consola
+    public void mostrarMensaje(String mensaje) {
+        System.out.println(mensaje);
     }
 
-    // Otros métodos de presentación en consola según sea necesario
+    // Otros métodos de presentación en consola si es necesario
 }
+

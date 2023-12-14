@@ -2,17 +2,22 @@ package View;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.List;
+import Controler.Controller;
 
-public class VistaGeneral {
-    private JTextArea areaTexto;
+public interface VistaGeneral {
 
-    public VistaGeneral() {
-        this.areaTexto = areaTexto;
-    }
+    public void setControlador(Controller c);
 
-    public void mostrarEnAreaTexto(String mensaje) {
-        areaTexto.append(mensaje + "\n");
-    }
+    public void iniciar();
+
+    public void detener();
+
+    public void mostrarMensaje(String mensaje);
+
+    public void mostrarEnAreaTexto(String mensaje);
 
     // Otros métodos de presentación en la interfaz gráfica si es necesario
 }

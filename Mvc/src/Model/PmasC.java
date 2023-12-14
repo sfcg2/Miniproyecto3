@@ -8,7 +8,7 @@ public class PmasC{
 
     public PmasC(){};
 
-    public void pMasC(){
+    public static void pMasC(){
 
         ArrayList<Candidato> listaC = Eliminar.getListaC2(); 
         

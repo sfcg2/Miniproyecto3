@@ -3,14 +3,8 @@ package Model;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import View.VistaGui;
-import View.VistaGeneral;
-import View.VistaConsola;
-import Model.Candidato;
-import Model.Insertar;
-import Model.Listar;
-import Model.Eliminar;
 import Model.Votar;
-import Model.Ciudadano; 
+
 
 public class Votar {
 

@@ -430,5 +430,5 @@ public void inscripciones(){
         wnd.setSize(500, 570); 
         wnd.setVisible(true);
     }}
-    // Resto del código de la clase...
+    
 
